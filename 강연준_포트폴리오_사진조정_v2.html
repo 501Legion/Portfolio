@@ -1,0 +1,1837 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1200" />
+<title>강연준 포트폴리오 | B2B Technical Sales, Pre-Sales</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+
+/* ============================== [PHOTO SETTINGS] 사진별 조정 ==============================
+   여기에서만 각 사진의 숫자를 바꾸세요. 저장(Ctrl+S) 후 브라우저 새로고침(Ctrl+R).
+
+   --photo-zoom : 1 = 기본, 1.2 = 20% 확대, 0.8 = 20% 축소 (단위 없음)
+   --photo-x    : 0px = 기본, 20px = 오른쪽, -20px = 왼쪽
+   --photo-y    : 0px = 기본, 20px = 아래, -20px = 위
+   --photo-fit  : contain = 전체 표시(여백 가능), cover = 프레임 채움(일부 잘림)
+   --photo-position : 박스 맞춤 정렬 및 확대 기준점.
+   --photo-height : auto = 원본 비율 그대로 가로폭에 맞춤, 100% = 박스 안에 맞춤
+   --frame-height : P02 사진 높이, P04 설명 줄을 포함한 최소 높이
+
+   가로폭 맞춤(auto): 좌우 여백을 줄이고 글자를 크게 표시. 아래쪽은 박스 밖에서 잘릴 수 있음.
+   전체 표시: --photo-height:100%; --photo-fit:contain; 적용. 비율에 따라 여백이 생김.
+   박스 채움: --photo-height:100%; --photo-fit:cover; 적용. 비율에 따라 사진 일부가 잘림.
+
+   1. 페이지별 기본 설정, zoom 1, x/y 0px에서 시작하세요. auto 모드에서는 fit을 바꿔도 크기가 바뀌지 않습니다.
+   2. zoom을 0.1씩 바꾼 뒤 x/y를 5~10px씩 움직이세요.
+   3. 확대하거나 이동한 사진은 프레임 밖에서 잘립니다. 프레임과 글 위치는 유지됩니다.
+   4. 같은 파일이 두 페이지에 있어도 각 설정은 독립적입니다.
+   5. 기존 uploads/ 파일 경로를 유지했습니다. HTML은 기존 uploads 폴더 옆에 두세요.
+   6. P02/P04 높이: 위 --frame-height 수정. P06 배치: [PHOTO FRAME SIZE] 검색.
+   P03에는 img 사진이 없습니다. 현재 원본은 총 7페이지이며 구성과 본문은 유지합니다.
+========================================================================================= */
+
+/* P01 | 프로필 사진 */
+#photo-p01-profile {
+  --photo-fit: cover;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+}
+
+/* P02 | 패스트파이브 영업 대시보드 */
+#photo-p02-sales {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+  --photo-height: auto; /* auto = 가로폭에 맞춤, 100% = 박스 안에 맞춤 */
+  --frame-height: 96px; /* 사진 박스 높이 */
+}
+
+/* P02 | 이커머스 매출 */
+#photo-p02-commerce {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+  --photo-height: auto; /* auto = 가로폭에 맞춤, 100% = 박스 안에 맞춤 */
+  --frame-height: 96px; /* 사진 박스 높이 */
+}
+
+/* P04 | 견적 자동화 결과 */
+#photo-p04-quote {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+  --photo-height: auto; /* auto = 가로폭에 맞춤, 100% = 박스 안에 맞춤 */
+  --frame-height: 132px; /* 설명 줄을 포함한 최소 높이 */
+}
+
+/* P04 | 리드 팔로업 대시보드 */
+#photo-p04-followup {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+  --photo-height: auto; /* auto = 가로폭에 맞춤, 100% = 박스 안에 맞춤 */
+  --frame-height: 132px; /* 설명 줄을 포함한 최소 높이 */
+}
+
+/* P05 | 브랜드 패키지 */
+#photo-p05-package {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center;
+}
+
+/* P05 | 매출 그래프 */
+#photo-p05-sales {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center;
+}
+
+/* P05 | 광고 성과 */
+#photo-p05-ads {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center;
+}
+
+/* P05 | 출원사실증명원 */
+#photo-p05-patent {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center;
+}
+
+/* P06 | 쿨매트 사용 장면과 핵심 문구 */
+#photo-p06-coolmat-scene {
+  --photo-fit: cover;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center;
+}
+
+/* P06 | 쿨매트 비교표 */
+#photo-p06-coolmat-info-1 {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+  --photo-height: auto; /* auto = 가로폭에 맞춤, 100% = 박스 안에 맞춤 */
+}
+
+/* P06 | 쿨매트 제품 정보 */
+#photo-p06-coolmat-info-2 {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center top;
+  --photo-height: auto; /* auto = 가로폭에 맞춤, 100% = 박스 안에 맞춤 */
+}
+
+/* P07 | SentiQuant 대시보드 */
+#photo-p07-dashboard {
+  --photo-fit: contain;
+  --photo-zoom: 1;
+  --photo-x: 0px;
+  --photo-y: 0px;
+  --photo-position: center;
+}
+
+/* [PHOTO FRAME SIZE] 박스 및 P06 배치
+   P02: 각 사진의 --frame-height 수정 (기본 96px).
+   P04: 각 사진의 --frame-height 수정 (기본 132px, 설명 줄 포함).
+   P06: 아래 1열/2행 = 위아래 배치. 2열/1행 = 원래 좌우 배치.
+   높이를 지나치게 늘리면 A4 하단이 잘릴 수 있으므로 인쇄 미리보기 확인.
+*/
+:root {
+  --p06-detail-columns: 1;
+  --p06-detail-rows: 2;
+}
+/* 프로필 박스 크기 조절 예시: 주석을 해제해 사용 */
+/* #photo-p01-profile { width: 96px; height: 120px; } */
+/* ============================================================================ */
+
+
+/* ============================================================================
+   PORTFOLIO CSS MAP | 직접 수정용   ***  v1.6  ***
+   ----------------------------------------------------------------------------
+   Ctrl+F로 아래 토큰을 검색하면 해당 페이지 스타일로 바로 이동합니다.
+
+   [CSS COMMON]  공통 색상 | 타이포 | 페이지 | 카드 | KPI
+   [CSS P01]     Profile
+   [CSS P02]     Project Overview
+   [CSS P03]     FastFive B2B Sales
+   [CSS P04]     Sales Ops
+   [CSS P05]     E-commerce / Brand
+   [CSS P06]     Data Optimization
+   [CSS P07]     SentiQuant
+   [CSS PRINT]   인쇄
+
+   v1.5 대비 변경점
+   - 7페이지 유지. P03 영업 내용 유지
+   - P04 견적 자동화 / 팔로업 도구별 재배치, RPA는 P01 주요 이력으로 이동
+   - 본문 12~13px 중심 확대, 한글 설명은 본문 글꼴 적용
+   - P06 퍼널 단계 정리, P07 체결 정합성 검증 사례 구체화
+   - Salesforce 개발 권한 제약: 2026.09.09 사용자 직접 확인
+============================================================================ */
+
+/* ============================== [CSS COMMON] ============================== */
+:root {
+  --accent: oklch(0.55 0.15 25);
+  --accent-soft: oklch(0.55 0.15 25 / 0.08);
+  --accent-line: oklch(0.55 0.15 25 / 0.25);
+  --ink: #141414;
+  --ink-2: #3a3a3a;
+  --ink-3: #6b6b6b;
+  --ink-4: #a0a0a0;
+  --line: #e5e3df;
+  --line-2: #efece7;
+  --bg: #fafaf8;
+  --paper: #ffffff;
+
+  /* [EDIT FONT] 모노 계열 폰트 스택
+     영문, 숫자 = JetBrains Mono / 한글 = Nanum Gothic Coding */
+  --mono: "JetBrains Mono", "Nanum Gothic Coding", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --gap-x: 64px;
+  --gap-y: 46px;
+  --density: 1;   /* 0.85 compact ~ 1.15 loose */
+  --kpi-scale: 1; /* 0.8 ~ 1.4 */
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Pretendard", "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  color: var(--ink);
+  font-feature-settings: "ss01", "ss02", "tnum";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.doc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 0 120px;
+}
+
+/* A4 landscape: 297 × 210 mm */
+.page {
+  width: 1123px;
+  height: 794px;
+  background: var(--paper);
+  position: relative;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 20px 40px -20px rgba(0,0,0,0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--gap-y) var(--gap-x);
+}
+
+/* [FIX v1.5] 머리글, 바닥글을 모든 페이지에서 표시.
+   v1.4에서는 display:none 이라 페이지 번호가 어디에도 출력되지 않았음 */
+.page-chrome-top,
+.page-chrome-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--ink-3);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.page-chrome-top {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+  margin-bottom: calc(20px * var(--density));
+}
+.page-chrome-bot {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  margin-top: calc(16px * var(--density));
+}
+.ch-left { display: flex; gap: 18px; align-items: center; }
+.ch-num { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.ch-dot { width: 4px; height: 4px; background: var(--accent); border-radius: 50%; display: inline-block; }
+.ch-tag {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-4);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.page-chrome-bot span:first-child { font-size: 11.5px; color: var(--ink-4); }
+
+/* 본문 영역은 머리글, 바닥글 사이를 채움 */
+.page > .p1-body,
+.page > .p2-body,
+.page > .ff-body,
+.page > .p3-body,
+.page > .dp-body,
+.page > .sq-body { flex: 1; min-height: 0; }
+
+/* Section headers */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-family: var(--mono);
+}
+.eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--accent); }
+
+h1.page-title {
+  font-size: 26.5px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.24;
+  margin: 8px 0 5px;
+  color: var(--ink);
+}
+.page-sub {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.48;
+  max-width: 820px;
+  margin: 0;
+}
+
+/* PAR flow blocks */
+.par-label {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--ink);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.par-num {
+  display: inline-block;
+  min-width: 20px;
+  padding: 2px 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 10.5px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* KPI */
+.kpi { display: flex; flex-direction: column; gap: 6px; }
+.kpi-value {
+  font-size: calc(56px * var(--kpi-scale));
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.kpi-value .unit { font-size: 0.35em; font-weight: 500; color: var(--ink-2); letter-spacing: 0; }
+.kpi-value .accent { color: var(--accent); }
+.kpi-label { font-size: 12.5px; color: var(--ink-3); letter-spacing: 0.02em; line-height: 1.4; }
+
+/* Placeholder */
+.ph {
+  position: relative;
+  background: repeating-linear-gradient(135deg, var(--line-2) 0 6px, transparent 6px 12px);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  color: var(--ink-3);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+}
+
+/* [FIX v1.5] 이미지 로드 실패 경고.
+   v1.4는 onerror 로 이미지를 숨겨서 빈 박스만 남고 원인을 알 수 없었음 */
+.img-missing {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8px; text-align: center;
+  border: 1px dashed var(--accent-line);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px; line-height: 1.45;
+  word-break: break-all;
+}
+
+/* Card */
+.card {
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.card-title { font-size: 12.5px; font-weight: 700; letter-spacing: -0.005em; color: var(--ink); }
+.card-body { font-size: 12.5px; line-height: 1.55; color: var(--ink-2); }
+.card.accent { border-color: var(--accent); position: relative; }
+.card.accent::before {
+  content: ""; position: absolute; top: -1px; left: -1px;
+  width: 8px; height: 8px; background: var(--accent);
+}
+
+/* Bullet list */
+.blist { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+.blist li {
+  font-size: 13px; line-height: 1.55; color: var(--ink-2);
+  padding-left: 14px; position: relative;
+}
+.blist li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 6px; height: 1px; background: var(--ink);
+}
+
+/* Utility */
+.row { display: flex; }
+.col { display: flex; flex-direction: column; }
+.grow { flex: 1; }
+.mono { font-family: var(--mono); }
+.muted { color: var(--ink-3); }
+.small { font-size: 12px; }
+.accent-t { color: var(--accent); }
+
+/* ============================== [CSS P01] PROFILE ============================== */
+.p1-body { display: flex; flex-direction: column; gap: 18px; width: 100%; }
+.p1-hero {
+  display: flex; align-items: flex-start; gap: 30px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--line);
+}
+.p1-profile-photo { flex-shrink: 0; width: 88px; height: 110px; border: 1px solid var(--line); overflow: hidden; }
+.p1-profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.p1-name-block { display: flex; flex-direction: column; gap: 2px; min-width: 150px; }
+.p1-name-ko { font-size: 34px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--ink); }
+.p1-name-en {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.14em;
+  color: var(--ink-3); text-transform: uppercase; margin-top: 4px;
+}
+.p1-contact { display: flex; flex-direction: column; gap: 5px; padding-top: 4px; min-width: 195px; }
+.p1-contact-row { display: flex; gap: 10px; font-size: 13px; color: var(--ink-2); align-items: center; }
+.p1-contact-label {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-4);
+  letter-spacing: 0.08em; text-transform: uppercase; min-width: 50px;
+}
+.p1-tagline-block { flex: 1; display: flex; flex-direction: column; gap: 10px; padding-top: 2px; }
+.p1-tagline { font-size: 14px; line-height: 1.5; color: var(--ink); letter-spacing: -0.01em; }
+.p1-skills { display: flex; gap: 6px; flex-wrap: wrap; }
+.skill-tag {
+  display: inline-block; padding: 3px 10px;
+  border: 1px solid var(--accent-line); color: var(--accent);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  text-transform: uppercase; background: var(--accent-soft);
+}
+.p1-grid { display: grid; grid-template-columns: 1fr 1.1fr 1.1fr; gap: 24px; flex: 1; min-height: 0; }
+.p1-section { display: flex; flex-direction: column; gap: 13px; min-height: 0; }
+.p1-sec-header {
+  display: flex; align-items: center; gap: 10px;
+  padding-bottom: 9px; border-bottom: 2px solid var(--ink);
+}
+.p1-sec-num {
+  width: 22px; height: 22px; background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 11.5px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.p1-sec-title { font-size: 13px; font-weight: 700; letter-spacing: 0.02em; color: var(--ink); }
+/* Education */
+.edu-row { display: flex; gap: 14px; align-items: flex-start; }
+.edu-main { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.edu-year { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); letter-spacing: 0.06em; }
+.edu-school { font-size: 12.5px; font-weight: 700; color: var(--ink); line-height: 1.35; }
+.edu-certs { display: flex; flex-direction: column; gap: 6px; }
+.cert-row { display: flex; align-items: center; gap: 8px; padding: 4px 10px; border: 1px solid var(--line); }
+.cert-label {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.08em;
+  color: var(--ink-4); text-transform: uppercase; min-width: 36px;
+}
+.cert-val { font-size: 13px; font-weight: 700; }
+/* [EDIT P01-ABROAD] 어학연수 한 줄 */
+.edu-abroad {
+  margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.edu-abroad .edu-year { letter-spacing: 0.04em; }
+.edu-abroad-t { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.35; }
+.edu-abroad-d { font-size: 12px; color: var(--ink-3); line-height: 1.45; }
+/* [EDIT P01-STACK] 기술 스택 요약. 기술영업 채용에서 스캔 대상 */
+.p1-stack { margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line); }
+.p1-stack-h {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.12em; color: var(--ink-4); text-transform: uppercase; margin-bottom: 7px;
+}
+.p1-stack-row { display: flex; flex-wrap: wrap; gap: 4px; }
+.p1-stack-row span {
+  border: 1px solid var(--line); padding: 3px 7px;
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-2); background: var(--paper);
+}
+/* KPI list */
+.p1-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 11px; flex: 1; justify-content: space-between; }
+.p1-list li {
+  display: flex; flex-direction: column; gap: 3px;
+  padding-bottom: 11px; border-bottom: 1px solid var(--line);
+  font-size: 12.5px; color: var(--ink-2); line-height: 1.45;
+}
+.p1-list li:last-child { border-bottom: none; padding-bottom: 0; }
+.p1-kpi-num {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+  display: flex; align-items: baseline; gap: 2px;
+}
+.p1-kpi-unit { font-size: 12.5px; font-weight: 500; color: var(--ink-2); letter-spacing: 0; }
+/* Career list */
+.p1-career-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 13px; flex: 1; justify-content: space-between; }
+.p1-career-list li { display: flex; gap: 10px; align-items: flex-start; }
+.career-icon {
+  width: 28px; height: 28px; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--accent); margin-top: 1px;
+}
+.career-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 2px; }
+.career-title { font-size: 12px; font-weight: 700; color: var(--ink); }
+.career-date {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-4);
+  white-space: nowrap; letter-spacing: 0.02em; font-variant-numeric: tabular-nums; flex-shrink: 0;
+}
+.career-desc { line-height: 1.45; }
+
+/* ============================== [CSS P02] PROJECT OVERVIEW ============================== */
+.p2-body { display: flex; flex-direction: column; width: 100%; }
+/* [FIX v1.5] 4열에서 3열로. 세렌딥 전용 카드 삭제 */
+.p2-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; flex: 1; margin-top: 12px; min-height: 0; }
+.p2-card { display: flex; flex-direction: column; border: 1px solid var(--line); overflow: hidden; gap: 0; }
+.p2-card-header { padding: 13px 16px 12px; border-bottom: 1px solid var(--line); background: var(--bg); }
+.p2-card-num {
+  font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  margin-bottom: 4px; display: flex; align-items: baseline; justify-content: space-between; gap: 6px;
+}
+.p2-card-date {
+  font-size: 10.5px; font-weight: 600; color: var(--ink-4);
+  letter-spacing: 0.02em; font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.p2-card-title {
+  font-size: 15px; font-weight: 800; line-height: 1.3;
+  letter-spacing: -0.02em; color: var(--ink); margin-bottom: 8px;
+}
+.p2-tag-row { display: flex; gap: 5px; flex-wrap: wrap; }
+.p2-tag {
+  display: inline-block; padding: 2px 7px; background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.p2-meta-grid { padding: 10px 16px; display: flex; flex-direction: column; gap: 6px; border-bottom: 1px solid var(--line); }
+.p2-meta-item { display: flex; flex-direction: column; gap: 1px; }
+.p2-meta-label {
+  font-family: var(--mono); font-size: 10px; color: var(--ink-4);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.p2-meta-val { font-size: 12.5px; color: var(--ink); font-weight: 600; line-height: 1.4; }
+.p2-desc { padding: 10px 16px; flex: 1; gap: 6px !important; }
+.p2-desc li { font-size: 12px !important; line-height: 1.5; }
+.p2-kpi-bar { display: flex; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.p2-kpi-item {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding: 8px 4px; gap: 2px; border-right: 1px solid var(--line);
+}
+.p2-kpi-item:last-child { border-right: none; }
+.p2-kpi-v { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; display: flex; align-items: baseline; gap: 1px; }
+.p2-kpi-l { font-size: 10.5px; color: var(--ink-3); font-family: var(--mono); letter-spacing: 0.04em; text-align: center; line-height: 1.35; }
+.p2-img-wrap { height: 76px; overflow: hidden; flex-shrink: 0; }
+
+/* [EDIT P02-BRIDGE] 역량 모델 스트립. 세 프로젝트가 하나의 직무로 어떻게 이어지는지 */
+.p2-bridge {
+  margin-top: 14px; flex-shrink: 0;
+  border: 1px solid var(--accent-line); background: var(--accent-soft);
+  padding: 12px 16px;
+}
+.p2-bridge-head {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; color: var(--accent); margin-bottom: 9px;
+}
+.p2-bridge-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.p2-bridge-item {
+  padding: 0 14px; border-right: 1px solid var(--accent-line);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.p2-bridge-item:first-child { padding-left: 0; }
+.p2-bridge-item:last-child { border-right: none; padding-right: 0; }
+.p2-bridge-t { font-size: 13px; font-weight: 700; color: var(--ink); }
+.p2-bridge-d { font-size: 11px; color: var(--ink-2); line-height: 1.45; }
+
+/* ============================== [CSS P05] E-COMMERCE / BRAND | BASE ============================== */
+.p3-main { display: grid; grid-template-columns: 270px 1fr; gap: 20px; flex: 1; min-height: 0; }
+.p3-brand-img { position: relative; border: 1px solid var(--line); overflow: hidden; flex-shrink: 0; }
+.p3-img-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(20,20,20,0.75); padding: 6px 10px;
+  font-family: var(--mono); font-size: 10px; color: #fff; letter-spacing: 0.07em;
+}
+.p3-cycle { display: flex; flex-direction: column; gap: 0; justify-content: space-between; }
+.sc-step {
+  border: 1px solid var(--line); padding: 10px 14px;
+  display: flex; flex-direction: column; gap: 4px; background: var(--paper);
+}
+.sc-step.accent-step { border-color: var(--accent-line); background: var(--accent-soft); }
+.sc-head { display: flex; align-items: center; gap: 8px; }
+.sc-num-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 10px; font-weight: 700; flex-shrink: 0;
+}
+.sc-step.accent-step .sc-num-badge { background: var(--accent); }
+.sc-step-title { font-size: 13px; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.sc-body { font-size: 12px; color: var(--ink-2); line-height: 1.5; padding-left: 26px; }
+.sc-connector { width: 1px; height: 6px; background: var(--line); margin-left: 18px; flex-shrink: 0; }
+.p3-kpi-strip { display: flex; gap: 0; border: 1px solid var(--line); margin-top: 4px; }
+.p3-kpi-item {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding: 8px 6px; border-right: 1px solid var(--line); gap: 2px;
+}
+.p3-kpi-item:last-child { border-right: none; }
+.p3-kv { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; display: flex; align-items: baseline; gap: 2px; }
+.p3-ku { font-size: 11.5px; font-weight: 500; color: var(--ink-2); letter-spacing: 0; }
+.p3-kl { font-size: 10.5px; color: var(--ink-3); font-family: var(--mono); letter-spacing: 0.03em; text-align: center; line-height: 1.35; }
+
+/* ============================== [CSS P06] DATA OPTIMIZATION | BASE ============================== */
+.journey-flow { display: flex; align-items: center; gap: 8px; padding: 6px 0; margin-bottom: 0; }
+.journey-step { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.journey-label {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+.journey-icon {
+  width: 32px; height: 32px; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.journey-icon.bad { border-color: var(--accent-line); background: var(--accent-soft); }
+.journey-issue { color: var(--ink-2); line-height: 1.4; }
+.journey-arrow { color: var(--ink-4); font-size: 16px; flex-shrink: 0; margin-bottom: 12px; }
+
+/* ============================== [CSS COMMON] ACTION GRID ============================== */
+.act-grid { display: flex; flex-direction: column; gap: 9px; }
+.act { border-left: 2px solid var(--ink); padding: 4px 0 4px 10px; }
+.act-k {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.02em; color: var(--ink);
+  text-transform: uppercase; font-family: var(--mono); margin-bottom: 3px;
+}
+.act-v { font-size: 12.5px; line-height: 1.5; color: var(--ink-2); }
+
+/* ============================== [CSS P03/P04] FASTFIVE SHARED ============================== */
+.ff-body { display: flex; flex-direction: column; min-height: 0; }
+.ff-grid { display: grid; grid-template-columns: 1.12fr 1fr; gap: 26px; flex: 1; margin-top: 14px; min-height: 0; }
+.ff-right { display: flex; flex-direction: column; min-height: 0; }
+.ff-kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ff-kpi { border: 1px solid var(--line); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; background: var(--paper); }
+.ff-kv {
+  font-size: calc(30px * var(--kpi-scale)); font-weight: 800; letter-spacing: -0.03em;
+  line-height: 1; display: flex; align-items: baseline; gap: 2px; font-variant-numeric: tabular-nums;
+}
+.ff-ku { font-size: 0.42em; font-weight: 600; color: var(--ink-2); }
+.ff-kl { font-size: 12px; color: var(--ink-3); line-height: 1.4; }
+.ff-snap { display: flex; align-items: stretch; gap: 0; border: 1px solid var(--line); margin-top: 12px; flex-shrink: 0; }
+.ff-snap-node { flex: 1; padding: 13px 16px; display: flex; flex-direction: column; gap: 5px; }
+.ff-snap-node.accent { background: var(--accent-soft); border-left: 1px solid var(--accent-line); }
+.ff-snap-v {
+  font-size: 24px; font-weight: 800; letter-spacing: -.03em; line-height: 1;
+  font-variant-numeric: tabular-nums; color: var(--ink); display: flex; align-items: baseline; gap: 2px;
+}
+.ff-snap-node.accent .ff-snap-v { color: var(--accent); }
+.ff-snap-v span { font-size: .42em; font-weight: 600; color: var(--ink-2); }
+.ff-snap-k { font-size: 11.5px; color: var(--ink-3); line-height: 1.45; }
+.ff-snap-arrow { display: flex; align-items: center; padding: 0 10px; color: var(--ink-4); font-size: 15px; border-left: 1px solid var(--line); }
+
+/* [CSS P04] SALES OPS main layout */
+.ff2-grid { display: grid; grid-template-columns: 1.02fr 1fr; gap: 24px; flex: 1; margin-top: 10px; min-height: 0; }
+.ff2-left, .ff2-right { display: flex; flex-direction: column; min-height: 0; }
+
+.ff-prob { font-size: 12px; line-height: 1.6; color: var(--ink-2); border-left: 2px solid var(--line); padding-left: 12px; }
+.ff-iter { border: 1px solid var(--line); }
+.ff-iter-row {
+  display: grid; grid-template-columns: 40px 1fr auto; align-items: center;
+  gap: 8px; padding: 6px 11px; border-bottom: 1px solid var(--line-2); font-size: 12px;
+}
+.ff-iter-row:last-child { border-bottom: 0; }
+.ff-iter-row.now { background: var(--accent-soft); }
+.ff-iter-v { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink-3); }
+.ff-iter-row.now .ff-iter-v { color: var(--accent); }
+.ff-iter-t { color: var(--ink); font-weight: 600; }
+.ff-iter-x { color: var(--ink-3); font-size: 11px; text-align: right; }
+.ff-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; flex: 1; min-height: 90px; }
+.ff-shot { height: 100%; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+.ff-shot img { width: 100%; height: 100%; display: block; }
+.ff-stack {
+  margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--line-2);
+  font-family: var(--mono); font-size: 10px; color: var(--ink-4); letter-spacing: .02em; line-height: 1.5;
+}
+.ff-tool { border: 1px solid var(--line); padding: 9px 13px; margin-bottom: 7px; background: var(--paper); }
+/* [EDIT P04-LEAD] 대표 도구는 accent 로 강조 */
+.ff-tool.lead { border-color: var(--accent); background: var(--accent-soft); }
+.ff-tool-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px; }
+.ff-tool-title { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+.ff-status {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em;
+  padding: 3px 8px; border: 1px solid var(--line); color: var(--ink-3);
+  text-transform: uppercase; white-space: nowrap;
+}
+.ff-status.deployed { color: var(--accent); border-color: var(--accent-line); background: var(--paper); }
+.ff-status.planning { color: var(--ink-3); }
+.ff-tool-body { font-size: 12px; line-height: 1.5; color: var(--ink-2); }
+.ff-tool.compact { padding: 8px 13px; margin-bottom: 8px; }
+.ff-tool.compact .ff-tool-head { margin-bottom: 3px; }
+.ff-tool.compact .ff-tool-title { font-size: 13px; }
+
+.ff-kpi-strip { display: flex; border: 1px solid var(--line); margin: 2px 0 9px; }
+.ff-kpi-s { flex: 1; padding: 8px 11px; display: flex; flex-direction: column; gap: 3px; border-right: 1px solid var(--line); }
+.ff-kpi-s:last-child { border-right: none; }
+.ff-kv2 {
+  font-size: 19px; font-weight: 800; letter-spacing: -0.03em; line-height: 1;
+  display: flex; align-items: baseline; gap: 2px; font-variant-numeric: tabular-nums;
+}
+.ff-kpi-s .ff-kl { font-size: 11px; line-height: 1.35; }
+
+/* [EDIT P04-RPA] 전자소송 RPA 이전 사례. 페이지 하단 전체 폭 밴드 */
+.prior-case {
+  margin-top: 12px; flex-shrink: 0;
+  border: 1px solid var(--ink); background: var(--paper);
+  padding: 10px 16px;
+  display: grid; grid-template-columns: 200px 1fr auto; gap: 16px; align-items: center;
+}
+.prior-l { display: flex; flex-direction: column; gap: 3px; }
+.prior-k {
+  font-family: var(--mono); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase;
+}
+.prior-t { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+.prior-b { font-size: 12px; line-height: 1.5; color: var(--ink-2); }
+.prior-b .ff-stack { margin-top: 4px; padding-top: 4px; }
+.prior-r { text-align: right; display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; }
+.prior-rv { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; color: var(--accent); }
+.prior-rk { font-size: 11px; color: var(--ink-3); line-height: 1.35; }
+
+/* ============================== [CSS P05] E-COMMERCE | EXTRA ============================== */
+.p3-body { display: grid; grid-template-rows: auto auto 1fr auto; gap: calc(14px * var(--density)); min-height: 0; }
+.evidence-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; height: calc(92px * var(--density)); }
+.evidence-row .ev { min-height: 0; }
+
+/* ============================== [CSS P07] SentiQuant ============================== */
+.sq-body { display: flex; flex-direction: column; min-height: 0; }
+.sq-kpi-hero {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  margin-top: 13px; padding: 11px 18px;
+  border: 1px solid var(--accent-line); background: var(--accent-soft); flex-shrink: 0;
+}
+.sq-kpi-hero .kpi { padding: 0 18px; border-right: 1px solid var(--accent-line); }
+.sq-kpi-hero .kpi:first-child { padding-left: 0; }
+.sq-kpi-hero .kpi:last-child { padding-right: 0; border-right: none; }
+.sq-kpi-hero .kpi-value { font-size: calc(33px * var(--kpi-scale)); }
+.sq-kpi-hero .kpi-label { font-size: 12px; }
+.sq-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 24px; margin-top: 13px; min-height: 0; flex: 1; }
+.sq-col { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.sq-flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.sq-node {
+  min-height: 50px; padding: 8px 8px; border: 1px solid var(--line);
+  background: var(--paper); font-size: 11px; line-height: 1.35; color: var(--ink-2);
+}
+.sq-node strong {
+  display: block; margin-bottom: 5px; color: var(--accent);
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+}
+.sq-note {
+  padding: 9px 12px; border-left: 2px solid var(--accent); background: var(--bg);
+  font-size: 11.5px; line-height: 1.5; color: var(--ink-2);
+}
+.sq-shot { position: relative; flex: 1; min-height: 96px; overflow: hidden; border: 1px solid var(--line); background: var(--bg); }
+.sq-shot img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: var(--paper); }
+.sq-shot-caption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 6px 10px;
+  background: rgba(20, 20, 20, 0.78); color: #fff;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em;
+}
+.sq-checks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.sq-check { padding: 8px; border: 1px solid var(--line); font-size: 11px; line-height: 1.4; color: var(--ink-2); }
+.sq-check b { display: block; margin-top: 3px; color: var(--ink); }
+.sq-decision { border: 1px solid var(--line); }
+.sq-decision-row {
+  display: grid; grid-template-columns: 52px 1fr; gap: 10px; padding: 6px 11px;
+  border-bottom: 1px solid var(--line); font-size: 11.5px; line-height: 1.45; color: var(--ink-2);
+}
+.sq-decision-row:last-child { border-bottom: none; background: var(--accent-soft); }
+.sq-decision-key { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }
+.sq-guards { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); }
+.sq-guards li {
+  display: flex; justify-content: space-between; gap: 12px; padding: 6px 10px;
+  border-bottom: 1px solid var(--line); font-size: 11px; line-height: 1.35; color: var(--ink-3);
+}
+.sq-guards li:last-child { border-bottom: none; }
+.sq-guards b { color: var(--ink); text-align: right; }
+.sq-status {
+  padding: 9px 12px; border: 1px solid var(--accent-line); background: var(--accent-soft);
+  font-size: 11.5px; line-height: 1.45; color: var(--ink-2);
+}
+.sq-status strong {
+  display: block; margin-bottom: 3px; font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.1em; color: var(--accent);
+}
+.sq-card-visual { height: 100%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); }
+.sq-card-visual span {
+  display: flex; align-items: center; justify-content: center; padding: 6px;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 10px; line-height: 1.25; text-align: center;
+}
+.sq-card-visual span:last-child { background: var(--accent); }
+
+/* ============================== [CSS P06] DATA OPTIMIZATION | LAYOUT ============================== */
+.dp-body { display: grid; grid-template-rows: auto auto 1fr; gap: calc(12px * var(--density)); min-height: 0; }
+.dp-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 24px; margin-top: 4px; min-height: 0; }
+.dp-action, .dp-ba { display: flex; flex-direction: column; gap: 11px; min-width: 0; }
+.dp-result-strip { border: 1px solid var(--accent-line); background: var(--accent-soft); margin-top: auto; padding: 11px 14px; }
+.dp-rs-head { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .12em; color: var(--accent); margin-bottom: 9px; }
+.dp-rs-grid { display: flex; gap: 0; }
+.dp-rs-item { flex: 1; display: flex; flex-direction: column; gap: 3px; border-right: 1px solid var(--accent-line); padding-right: 12px; }
+.dp-rs-item:last-child { border-right: 0; }
+.dp-rs-item + .dp-rs-item { padding-left: 14px; }
+.dp-rs-v { font-size: 22px; font-weight: 800; letter-spacing: -.03em; line-height: 1; font-variant-numeric: tabular-nums; display: flex; align-items: baseline; gap: 1px; }
+.dp-rs-u { font-size: .42em; font-weight: 600; color: var(--ink-2); }
+.dp-rs-k { font-size: 11px; color: var(--ink-3); line-height: 1.35; }
+.ba-cards { display: grid; grid-template-columns: 1fr 20px 1fr; gap: 10px; align-items: stretch; flex: 1; min-height: 0; }
+.ba-card { border: 1px solid var(--line); padding: 12px; display: flex; flex-direction: column; gap: 8px; background: var(--paper); min-height: 0; }
+.ba-card.product-detail { border-color: var(--accent); background: var(--accent-soft); }
+.ba-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; flex: 1; min-height: 0; }
+.ba-shot {
+  padding: 0; background: #fff; border: 1px solid var(--line);
+  overflow: hidden; display: flex; align-items: center; justify-content: center;
+  min-height: 0;
+}
+.ba-shot.ba-shot-single { flex: 1; }
+.ba-shot img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+.ba-card-h { font-family: var(--mono); font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; color: var(--ink); }
+.ba-card-h.accent-t { color: var(--accent); }
+.ba-arrow { display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.mini-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+.mini-list li { font-size: 12px; line-height: 1.45; color: var(--ink-2); padding-left: 10px; position: relative; }
+.mini-list li::before {
+  content: ""; position: absolute; left: 0; top: 0.65em;
+  width: 4px; height: 1px; background: var(--ink-3);
+}
+.dp-note { margin-top: 6px; font-size: 10.5px; line-height: 1.45; color: var(--ink-4); }
+
+
+/* ============================== [CSS v1.6] READABILITY / P04 ============================== */
+/* [EDIT FONT] 본문 12~13px, 메타 정보 10~11.5px. 한글 문장은 본문 글꼴로 표시 */
+:root { --gap-x: 54px; --gap-y: 38px; --ink-4: #77736e; }
+.par-label,.act-k,.ba-card-h,.p2-meta-label,.p2-kpi-l,.p3-kl { font-family: inherit; letter-spacing: .02em; }
+.page-sub { max-width: 980px; line-height: 1.5; }
+.career-head { flex-wrap: wrap; gap: 3px 8px; }
+.career-title { font-size: 13px; }
+.career-date { font-size: 10.5px; }
+.career-desc { font-size: 12px; }
+.p1-hero { gap: 22px; }
+.p1-career-list { gap: 10px; }
+.p1-career-list li > div:last-child { min-width: 0; }
+.p1-grid { grid-template-columns: .9fr 1fr 1.22fr; gap: 22px; }
+.p1-contact { min-width: 190px; }
+.p1-contact-row { font-size: 12px; }
+.p1-contact-label { font-family: inherit; min-width: 47px; }
+.p1-name-block { min-width: 142px; }
+.p1-stack-row span { font-size: 10px; }
+.p1-list { gap: 9px; }
+.p1-list li { padding-bottom: 9px; }
+.p2-card-num { flex-wrap: wrap; }
+.p2-card-date { width:100%; }
+.p2-desc { gap: 8px !important; }
+.p2-img-wrap { height: 65px; }
+.p2-bridge { padding: 10px 14px; margin-top: 12px; }
+.p2-bridge-head { margin-bottom: 7px; }
+.p2-bridge-d { line-height: 1.45; }
+.p2-bridge-item { padding: 0 11px; }
+.p3-body { grid-template-rows: auto auto auto minmax(0,1fr) auto; gap: 10px; }
+.p3-main { grid-template-columns: 255px 1fr; }
+.sc-body { line-height: 1.5; }
+.p3-img-caption,.ev-caption { font-family:inherit; letter-spacing:0; }
+.dp-grid { grid-template-columns: .95fr 1.05fr; gap: 22px; }
+.dp-note { color:var(--ink-3); }
+.sq-flow { gap:5px; }
+.sq-node { padding:7px; font-family:inherit; }
+.sq-node strong { font-size:9px; }
+.sq-grid { gap:20px; grid-template-columns: 1fr 1fr; }
+.sq-col { gap:7px; }
+.sq-note,.sq-status { padding:8px 10px; }
+.sq-guards li { gap:8px; }
+.sq-reconcile { border:1px solid var(--line); padding:8px 10px; display:grid; gap:6px; }
+.sq-reconcile > div { display:grid; grid-template-columns:30px 1fr; gap:8px; font-size:12px; line-height:1.5; }
+.sq-reconcile > div > b { color:var(--accent); }
+.sq-reconcile > div:last-child { border-top:1px solid var(--line); padding-top:6px; }
+/* [EDIT P04-LAYOUT] 두 도구의 독립된 흐름. 마지막 밴드는 공유와 기획 */
+.ops-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; flex:1; min-height:0; margin-top:12px; }
+.ops-panel { border:1px solid var(--line); padding:13px 15px 10px; display:flex; flex-direction:column; gap:9px; min-width:0; min-height:0; }
+.ops-quote { border-color:var(--accent-line); }
+.ops-heading h2 { font-size:18px; line-height:1.2; letter-spacing:-.02em; margin:4px 0 0; }
+.ops-label { font-size:10.5px; font-weight:650; color:var(--accent); letter-spacing:.015em; }
+.ops-metrics { display:grid; grid-template-columns:1.2fr 1fr; padding:9px 12px; background:var(--accent-soft); }
+.ops-metrics > div { display:flex; flex-direction:column; gap:3px; }
+.ops-metrics > div + div { border-left:1px solid var(--accent-line); padding-left:16px; }
+.ops-metrics strong { font-size:24px; letter-spacing:-.03em; color:var(--accent); line-height:1.05; }
+.ops-metrics span { font-size:11px; color:var(--ink-2); }
+.ops-steps { display:grid; gap:8px; }
+.ops-steps > div { display:grid; grid-template-columns:30px 1fr; gap:10px; }
+.ops-steps > div > b { font-size:12px; padding-top:1px; }
+.ops-steps p { margin:0; font-size:12.5px; color:var(--ink-2); line-height:1.5; word-break:keep-all; }
+.ops-proof { border-left:2px solid var(--accent); padding:4px 10px; display:flex; flex-direction:column; gap:3px; }
+.ops-proof strong { font-size:13px; }
+.ops-proof span { font-size:11px; color:var(--ink-3); }
+.ops-handover { background:var(--bg); border:1px solid var(--line); padding:9px 11px; }
+.ops-handover p { font-size:12px; line-height:1.5; margin:5px 0 7px; color:var(--ink-2); }
+.ops-adoption { display:flex; align-items:baseline; flex-wrap:wrap; gap:3px 8px; padding-top:6px; border-top:1px solid var(--line); }
+.ops-adoption strong { font-size:15px; color:var(--accent); }
+.ops-adoption span { font-size:10.5px; color:var(--ink-3); }
+/* [EDIT P04-IMAGE] 사진 배율과 위치는 [PHOTO SETTINGS]에서 조정 */
+.ops-evidence { margin:0; flex:1; min-height:55px; position:relative; border:1px solid var(--line); overflow:hidden; }
+.ops-evidence img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:center top; }
+.ops-evidence figcaption { position:absolute; bottom:0; left:0; right:0; padding:3px 7px; font-size:10px; background:rgba(255,255,255,.94); color:var(--ink-3); border-top:1px solid var(--line); }
+.ops-stack { font-size:10.5px; color:var(--ink-3); }
+.ops-bottom { display:grid; grid-template-columns:1fr 1fr; gap:18px; padding:9px 0 0; margin-top:10px; border-top:1px solid var(--line); flex-shrink:0; }
+.ops-bottom > div { display:flex; flex-direction:column; gap:3px; }
+.ops-bottom strong { font-size:12px; }
+.ops-bottom span { font-size:11.5px; color:var(--ink-2); }
+
+/* ============================== [CSS PRINT] ============================== */
+/* [FIX v1.5] v1.4에는 @page 규칙이 없어 PDF 출력 시 여백 때문에
+   축소되거나 페이지가 잘렸음. 아래 설정으로 A4 가로 1페이지에 정확히 맞음 */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+@media print {
+  html, body {
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .doc { gap: 0; padding: 0; }
+  .page {
+    width: 297mm;
+    height: 209.4mm;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+  .page:last-of-type { break-after: auto; page-break-after: auto; }
+}
+
+/* ============================== [PHOTO ENGINE] 공통 적용 | 수정 불필요 ==============================
+   개별 이미지의 inline style 대신 위 [PHOTO SETTINGS] 값을 적용합니다.
+   translate를 scale 앞에 두어 확대해도 이동값(px)이 같은 거리로 적용됩니다.
+*/
+.page .photo-frame {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.page .photo-frame img.photo-adjust {
+  position: absolute;
+  inset: 0 0 auto 0;
+  display: block;
+  width: 100%;
+  height: var(--photo-height, 100%);
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  object-fit: var(--photo-fit, contain);
+  object-position: var(--photo-position, center);
+  transform-origin: var(--photo-position, center);
+  transform: translate(var(--photo-x, 0px), var(--photo-y, 0px)) scale(var(--photo-zoom, 1));
+  z-index: 0;
+}
+.page .photo-frame > figcaption,
+.page .photo-frame > .p3-img-caption,
+.page .photo-frame > .sq-shot-caption { z-index: 1; }
+
+
+/* [PHOTO LAYOUT FIX] 사진이 작은 띠로 보이지 않도록 페이지별 비율 확보 */
+#page-02-overview .p2-img-wrap { height: 96px; }
+#page-02-overview .p2-card-header { padding: 8px 16px; }
+#page-02-overview .p2-meta-grid { padding: 7px 16px; }
+#page-02-overview .p2-kpi-item { padding: 5px 4px; }
+#page-02-overview .p2-desc { padding: 6px 16px; }
+.page .p2-img-wrap.photo-frame { height: var(--frame-height, 96px); }
+#page-04-sales-ops h1.page-title { font-size: 24px; }
+#page-04-sales-ops .ops-panel { gap: 7px; }
+#page-04-sales-ops .ops-steps { gap: 6px; }
+#page-04-sales-ops .ops-evidence {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  flex: 1 0 var(--frame-height, 132px);
+  min-height: var(--frame-height, 132px);
+}
+.page .photo-window {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+#page-04-sales-ops .ops-evidence figcaption {
+  position: static;
+  min-height: 22px;
+  line-height: 15px;
+  background: #fff;
+}
+.page .ba-shots {
+  grid-template-columns: repeat(var(--p06-detail-columns), minmax(0, 1fr));
+  grid-template-rows: repeat(var(--p06-detail-rows), minmax(0, 1fr));
+}
+
+
+/* [CSS P06 COOLMAT] 동등한 제작 사례 두 영역, 전후 비교 화살표 없음 */
+#page-06-data-optimization .ba-cards { grid-template-columns: 1fr 1fr; }
+#page-06-data-optimization .coolmat-scope { margin-top: -4px; }
+
+</style>
+<script>
+/* [FIX v1.5] 이미지 경로가 깨졌을 때 조용히 사라지지 않고 눈에 띄게 표시.
+   제출 전 육안 점검용. 모든 슬롯이 정상이면 이 함수는 호출되지 않습니다. */
+function imgFail(el) {
+  var d = document.createElement('div');
+  d.className = 'img-missing';
+  d.textContent = '이미지 미연결 | ' + (el.getAttribute('src') || '');
+  if (el.parentNode) el.parentNode.replaceChild(d, el);
+}
+</script>
+</head>
+<body>
+
+<!-- ===========================================================================
+  PORTFOLIO HTML MAP | 직접 수정용   ***  v1.6  ***
+  -----------------------------------------------------------------------------
+  Ctrl+F 검색 토큰
+
+  [HTML P01] PAGE 01 |  Profile / 핵심 성과 / 주요 이력
+  [HTML P02] PAGE 02 |  Project Overview + 역량 모델
+  [HTML P03] PAGE 03 |  FastFive B2B Sales
+  [HTML P04]  Sales Ops | 견적 자동화 / 팔로업
+  [HTML P05] PAGE 05 |  E-commerce / Brand
+  [HTML P06] PAGE 06 |  Data Optimization
+  [HTML P07] PAGE 07 |  SentiQuant
+
+  이미지 경로만 찾기:  src="uploads/
+  확인이 필요한 항목:  [확인 필요]
+=========================================================================== -->
+
+<div class="doc" id="doc">
+
+<!-- ========================== [HTML P01] PAGE 01 | PROFILE ========================== -->
+<section class="page" id="page-01-profile" data-screen-label="01 Profile">
+  <header class="page-chrome-top">
+    <div class="ch-left">
+      <span class="ch-num">01</span>
+      <span class="ch-dot"></span>
+      <span class="ch-tag">PROFILE | INTRODUCTION</span>
+    </div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+
+  <div class="p1-body">
+    <!-- [EDIT P01-1] PROFILE HERO | 사진 / 이름 / 연락처 / 한줄소개 -->
+    <div class="p1-hero">
+      <!-- [PHOTO P01-PROFILE] P01 | 프로필 사진 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="p1-profile-photo photo-frame" id="photo-p01-profile">
+        <img class="photo-adjust" src="uploads/profile.png" alt="강연준" onerror="imgFail(this)" />
+      </div>
+      <div class="p1-name-block">
+        <div class="p1-name-ko">강연준</div>
+        <div class="p1-name-en">YENJUN KANG</div>
+      </div>
+      <div class="p1-contact">
+        <div class="p1-contact-row"><span class="p1-contact-label">생년월일</span><span>2000.07.05</span></div>
+        <div class="p1-contact-row"><span class="p1-contact-label">연락처</span><span>010 2751 3770</span></div>
+        <div class="p1-contact-row"><span class="p1-contact-label">이메일</span><span>gunner07050@gmail.com</span></div>
+      </div>
+      <div class="p1-tagline-block">
+        <div class="p1-tagline">현업의 문제를 발견하고,<br/><strong>직접 구현한 뒤 수치로 검증합니다.</strong></div>
+        <div class="p1-skills">
+          <span class="skill-tag">B2B Technical Sales</span>
+          <span class="skill-tag">Pre-Sales</span>
+          <span class="skill-tag">Sales Ops</span>
+          <span class="skill-tag">AI, Automation(AX)</span>
+          <span class="skill-tag">Business Operations</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- [EDIT P01-2] INFO GRID | 학력 / 핵심성과 / 주요이력 -->
+    <div class="p1-grid">
+      <!-- [EDIT P01-2C] 학력 | 어학 | 해외활동 -->
+      <div class="p1-section edu">
+        <div class="p1-sec-header">
+          <span class="p1-sec-num">01</span>
+          <span class="p1-sec-title">학력 | 어학</span>
+        </div>
+        <div class="edu-row">
+          <div class="edu-main">
+            <div class="edu-year">2026.08.21</div>
+            <div class="edu-school">조선대학교 AI, SW학부<br/>(컴퓨터공학전공)</div>
+            <div class="edu-detail muted small">졸업 &nbsp;|&nbsp; 3.87 / 4.5</div>
+          </div>
+          <div class="edu-certs">
+            <div class="cert-row"><span class="cert-label">OPIc</span><span class="cert-val accent-t">IH</span></div>
+            <div class="cert-row"><span class="cert-label">TOEIC</span><span class="cert-val accent-t">820</span></div>
+          </div>
+        </div>
+        <!-- [EDIT P01-ABROAD] 어학연수. 외국계, 글로벌 SaaS 지원 시 특히 유효 -->
+        <div class="edu-abroad">
+          <div class="edu-year">2025.01 – 2025.04</div>
+          <div class="edu-abroad-t">University of Florida ELI 어학연수</div>
+          <div class="edu-abroad-d">현지인과 다양한 국적의 구성원과 영어로 소통. 계좌 개설, 통신 개통과 요금제 문의 등 생활 행정 문제를 직접 해결.</div>
+        </div>
+        <!-- [EDIT P01-STACK] 기술 스택 -->
+        <div class="p1-stack">
+          <div class="p1-stack-h">Technical Stack</div>
+          <div class="p1-stack-row">
+            <span>Python</span><span>JavaScript</span><span>Chrome MV3</span>
+            <span>SOQL, SQL</span><span>Google Apps Script</span><span>Salesforce</span>
+            <span>Selenium</span><span>FinBERT</span><span>Streamlit</span><span>Figma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- [EDIT P01-2A] 핵심 성과 -->
+      <div class="p1-section kpi-sec">
+        <div class="p1-sec-header">
+          <span class="p1-sec-num">02</span>
+          <span class="p1-sec-title">핵심 성과</span>
+        </div>
+        <ul class="p1-list">
+          <li>
+            <span class="p1-kpi-num accent-t">22<span class="p1-kpi-unit">%</span></span>
+            <span>리드에서 계약 전환율, 근속 3개월 이하 신입군 12명 중 1위</span>
+          </li>
+          <li>
+            <span class="p1-kpi-num accent-t">10<span class="p1-kpi-unit">분 → 30초</span></span>
+            <span>직접 개발한 견적 자동화, 소속팀 8명 전원 포함 사내 약 12명 사용</span>
+          </li>
+          <li>
+            <span class="p1-kpi-num accent-t">4<span class="p1-kpi-unit">팀 29명</span></span>
+            <span>팔로업 도구 전달 후 사내팀이 구현한 Salesforce 정식 기능의 사용자 수</span>
+          </li>
+          <li>
+            <span class="p1-kpi-num accent-t">1,026<span class="p1-kpi-unit">만원</span></span>
+            <span>1인 이커머스 최대 월매출, 쿠팡 평균 구매 전환율 15%</span>
+          </li>
+          <li>
+            <span class="p1-kpi-num accent-t">47<span class="p1-kpi-unit">거래일</span></span>
+            <span>SentiQuant 제출 후 모의운영으로 초기 가설을 직접 반증, 체결 원장 72/72 일치</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- [EDIT P01-2B] 주요 이력 -->
+      <div class="p1-section career-sec">
+        <div class="p1-sec-header">
+          <span class="p1-sec-num">03</span>
+          <span class="p1-sec-title">주요 이력</span>
+        </div>
+        <ul class="p1-career-list">
+          <li>
+            <div class="career-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 21V8l7-5 7 5v13" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M3 21h18M14 21v-6h4v6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="career-head"><span class="career-title">B2B 오피스 세일즈 | Sales Ops</span><span class="career-date">2026.06 – 2026.09</span></div>
+              <div class="career-desc muted small">패스트파이브 인턴 | 7월 9건 24석 계약 | 업무 개선 도구 2종 자발적 제안과 개발</div>
+            </div>
+          </li>
+          <li>
+            <div class="career-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="career-head"><span class="career-title">SentiQuant | AI 투자 의사결정</span><span class="career-date">2026.03 – 현재</span></div>
+              <div class="career-desc muted small">4인 팀 팀장 | FinBERT와 LLM 통합, 운영 검증 | 산학프로젝트 성적 A</div>
+            </div>
+          </li>
+          <li>
+            <div class="career-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M8 6V5a2 2 0 014 0v1" stroke="currentColor" stroke-width="1.4"/></svg>
+            </div>
+            <div>
+              <div class="career-head"><span class="career-title">1인 이커머스 | 공급사 협상</span><span class="career-date">2024.07 – 2026.01</span></div>
+              <div class="career-desc muted small">쿠팡, 스마트스토어 운영 | 최대 월매출 10,268,140원 | MOQ 2,000→1,000개</div>
+            </div>
+          </li>
+          <li>
+            <div class="career-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="1.4"/></svg>
+            </div>
+            <div>
+              <div class="career-head"><span class="career-title">세렌딥 연합 창업동아리 | 창설 회장</span><span class="career-date">2025</span></div>
+              <div class="career-desc muted small">교내 20여 개 동아리에 제안해 8개 합류 | 지원사업 확보 후 경진대회 총괄, 참가 20명 | 대한상공회의소 광주인력개발원 우수상</div>
+            </div>
+          </li>
+          <!-- [EDIT P01-RPA] P04에서 이동한 이전 자동화 경험 -->
+          <li>
+            <div class="career-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M8 4H4v16h16V4h-4M8 2h8v4H8zM8 12l3 3 5-6" stroke="currentColor" stroke-width="1.4"/></svg></div>
+            <div>
+              <div class="career-head"><span class="career-title">전자소송 입력 RPA</span><span class="career-date">2024 상반기, 약 4개월</span></div>
+              <div class="career-desc muted small">단기 근무 중 Python RPA 구현과 도입 제안 | 수작업 5단계→1단계 | 실제 업무 약 1,000건 처리 중 입력 오류 0건</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-chrome-bot">
+    <span>강연준 | B2B Technical Sales, Pre-Sales | 2026</span>
+    <span class="ch-tag">P. 01 / 07</span>
+  </footer>
+</section>
+
+<!-- ========================== [HTML P02] PAGE 02 | PROJECT OVERVIEW ========================== -->
+<section class="page" id="page-02-overview" data-screen-label="02 Project Overview">
+  <header class="page-chrome-top">
+    <div class="ch-left">
+      <span class="ch-num">02</span>
+      <span class="ch-dot"></span>
+      <span class="ch-tag">PROJECTS | OVERVIEW</span>
+    </div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+
+  <div class="p2-body">
+    <div class="eyebrow">3 Projects, 5 Cases | From Problem to Measurable Result</div>
+    <h1 class="page-title" style="font-size: 23px; margin-bottom:2px">문제를 발견하고, 직접 해결하며,<br/>결과로 검증한 세 가지 경험.</h1>
+
+    <div class="p2-grid">
+      <!-- [EDIT P02-1] PROJECT 01 | FASTFIVE → 상세 Case 01, Case 02 -->
+      <div class="p2-card">
+        <div class="p2-card-header">
+          <div class="p2-card-num accent-t">01 <span style="color:var(--ink-4)">| CASE 01, 02</span><span class="p2-card-date">2026.06 – 2026.09</span></div>
+          <div class="p2-card-title">패스트파이브<br/>B2B 오피스 세일즈</div>
+          <div class="p2-tag-row">
+            <span class="p2-tag">B2B Sales</span>
+            <span class="p2-tag">Sales Ops</span>
+            <span class="p2-tag">Salesforce</span>
+          </div>
+        </div>
+        <div class="p2-meta-grid">
+          <div class="p2-meta-item">
+            <div class="p2-meta-label">핵심 역할</div>
+            <div class="p2-meta-val">오피스세일즈 담당자(인턴), Sales Ops</div>
+          </div>
+        </div>
+        <ul class="blist p2-desc">
+          <li>입사 2개월 차, 근속 3개월 이하 신입군 12명 중 전환율 1위</li>
+          <li>업무 개선 도구 2종을 자발적으로 제안하고 개발</li>
+          <li>견적 도구 사내 배포, 팔로업은 사내팀 정식 구현</li>
+        </ul>
+        <div class="p2-kpi-bar">
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">9<span style="font-size:0.45em">건</span></span><span class="p2-kpi-l">2026.07 계약<br>24석</span></div>
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">22.0<span style="font-size:0.45em">%</span></span><span class="p2-kpi-l">전환율<br>신입군 1위</span></div>
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">10<span style="font-size:0.45em">분→30초</span></span><span class="p2-kpi-l">견적 1건<br>처리시간</span></div>
+        </div>
+        <!-- [PHOTO P02-SALES] P02 | 패스트파이브 영업 대시보드 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="p2-img-wrap photo-frame" id="photo-p02-sales">
+          <img class="photo-adjust" src="uploads/패스트파이브_대시보드.png" alt="패스트파이브 영업 대시보드 및 계약 화면" onerror="imgFail(this)">
+        </div>
+      </div>
+
+      <!-- [EDIT P02-2] PROJECT 02 | 이커머스 → 상세 Case 03, Case 04 -->
+      <div class="p2-card">
+        <div class="p2-card-header">
+          <div class="p2-card-num accent-t">02 <span style="color:var(--ink-4)">| CASE 03, 04</span><span class="p2-card-date">2024.07 – 2026.01</span></div>
+          <div class="p2-card-title">1인 이커머스<br/>비즈니스 창업</div>
+          <div class="p2-tag-row">
+            <span class="p2-tag">E-commerce</span>
+            <span class="p2-tag">IP</span>
+            <span class="p2-tag">SCM</span>
+          </div>
+        </div>
+        <div class="p2-meta-grid">
+          <div class="p2-meta-item">
+            <div class="p2-meta-label">핵심 역할</div>
+            <div class="p2-meta-val">기획 및 총괄 운영</div>
+          </div>
+        </div>
+        <ul class="blist p2-desc">
+          <li>판매 실적을 근거로 공급사 MOQ 2,000→1,000개 조정</li>
+          <li>2024.07 – 09 쿠팡 평균 구매 전환율 15%, ROAS 1110%</li>
+          <li>선행상표 조사부터 출원과 최종 등록까지 직접 진행</li>
+        </ul>
+        <div class="p2-kpi-bar">
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">1,026<span style="font-size:0.45em">만원</span></span><span class="p2-kpi-l">2024.10<br>최대 월매출</span></div>
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">15<span style="font-size:0.45em">%</span></span><span class="p2-kpi-l">구매<br>전환율</span></div>
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">1110<span style="font-size:0.45em">%</span></span><span class="p2-kpi-l">쿠팡<br>평균 ROAS</span></div>
+        </div>
+        <!-- [PHOTO P02-COMMERCE] P02 | 이커머스 매출 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="p2-img-wrap photo-frame" id="photo-p02-commerce">
+          <img class="photo-adjust" src="uploads/pasted-1776860396496-0.png" alt="스마트스토어 매출 데이터" onerror="imgFail(this)">
+        </div>
+      </div>
+
+      <!-- [EDIT P02-3] PROJECT 03 | SentiQuant → 상세 Case 05 -->
+      <div class="p2-card">
+        <div class="p2-card-header">
+          <div class="p2-card-num accent-t">03 <span style="color:var(--ink-4)">| CASE 05</span><span class="p2-card-date">2026.03 – 현재</span></div>
+          <div class="p2-card-title">SentiQuant<br/>AI 투자 의사결정</div>
+          <div class="p2-tag-row">
+            <span class="p2-tag">FinBERT</span>
+            <span class="p2-tag">KIS API</span>
+            <span class="p2-tag">운영 검증</span>
+          </div>
+        </div>
+        <div class="p2-meta-grid">
+          <div class="p2-meta-item">
+            <div class="p2-meta-label">핵심 역할</div>
+            <div class="p2-meta-val">4인 팀 팀장, 프로젝트 총괄</div>
+          </div>
+        </div>
+        <ul class="blist p2-desc">
+          <li>뉴스와 Reddit 비정형 데이터를 FinBERT로 분석</li>
+          <li>기술지표와 규칙을 따르는 제한형 LLM Router 결합</li>
+          <li>제출 후 모의체결로 가설을 검증하고, 뒤집힌 가설은 폐기</li>
+        </ul>
+        <div class="p2-kpi-bar">
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">47<span style="font-size:0.45em">거래일</span></span><span class="p2-kpi-l">제출 후<br>모의운영</span></div>
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">72/72</span><span class="p2-kpi-l">체결<br>원장 일치</span></div>
+          <div class="p2-kpi-item"><span class="p2-kpi-v accent-t">304<span style="font-size:0.45em">개</span></span><span class="p2-kpi-l">회귀<br>테스트</span></div>
+        </div>
+        <div class="p2-img-wrap">
+          <div class="sq-card-visual" aria-label="SentiQuant 시스템 흐름">
+            <span>NEWS<br/>REDDIT</span>
+            <span>FINBERT<br/>SIGNAL</span>
+            <span>LLM<br/>ROUTER</span>
+            <span>KIS<br/>VALIDATE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- [EDIT P02-BRIDGE] 세 프로젝트가 하나의 직무로 이어지는 이유. 면접 첫 질문 대비 -->
+    <div class="p2-bridge">
+      <div class="p2-bridge-head">WHY THIS MAPS TO TECHNICAL SALES, PRE-SALES</div>
+      <div class="p2-bridge-row">
+        <div class="p2-bridge-item">
+          <div class="p2-bridge-t">고객 문제 진단</div>
+          <div class="p2-bridge-d">리드 41건의 이전 사유와 제약조건 진단 | 구매 퍼널을 지표로 분해해 이탈 지점 특정</div>
+        </div>
+        <div class="p2-bridge-item">
+          <div class="p2-bridge-t">직접 구현</div>
+          <div class="p2-bridge-d">견적 도구 배포, 팔로업 도구 테스트 | AI 모델과 외부 API를 하나의 판단 흐름으로 통합</div>
+        </div>
+        <div class="p2-bridge-item">
+          <div class="p2-bridge-t">수치로 검증</div>
+          <div class="p2-bridge-d">견적 10분에서 30초 | 47거래일 모의운영으로 초기 가설을 스스로 반증</div>
+        </div>
+        <div class="p2-bridge-item">
+          <div class="p2-bridge-t">조직 설득</div>
+          <div class="p2-bridge-d">사내 도구 채택과 팀 전체 발표 | 판매 실적을 근거로 공급사 MOQ 조건 조정</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-chrome-bot">
+    <span>패스트파이브 | 1인 이커머스 | SentiQuant | 2024 – 2026</span>
+    <span class="ch-tag">P. 02 / 07</span>
+  </footer>
+</section>
+
+<!-- ========================== [HTML P03] PAGE 03 | FASTFIVE B2B SALES ========================== -->
+<section class="page" id="page-03-fastfive-sales" data-screen-label="03 FastFive B2B Sales">
+  <header class="page-chrome-top">
+    <div class="ch-left">
+      <span class="ch-num">03</span>
+      <span class="ch-dot"></span>
+      <span class="ch-tag">B2B OFFICE SALES | FASTFIVE</span>
+    </div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+
+  <div class="ff-body">
+    <div class="eyebrow">Case 01 | B2B 오피스 세일즈 풀사이클, 패스트파이브</div>
+    <h1 class="page-title">입사 2개월 차, 근속 3개월 이하 신입군 전환율 1위.<br/>41개 리드에서 9건의 계약 성사.</h1>
+    <p class="page-sub"><b>오피스세일즈그룹 소속, 오피스세일즈 담당자</b>로 근무한 인턴. 근속 1.9개월 시점에 근속 3개월 이하 신입군 12명 중 <b>리드에서 계약 전환율 1위(22.0%, 신입 평균의 2.2배)</b>, 전체 32명 기준 11위. 2026년 7월 배분 리드 41건을 니즈 진단, 투어, 협상, 팔로업으로 계약까지 연결.</p>
+
+    <div class="ff-grid">
+      <!-- [EDIT P03-2] LEFT | SALES PROCESS -->
+      <div class="p3-cycle">
+        <div class="sc-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">01</span>
+            <span class="sc-step-title">문의 접수와 니즈 진단</span>
+          </div>
+          <div class="sc-body">기업 규모, 이전 사유, 예산, 입주 시점을 확인하고 질문을 통해 <b>숨은 제약조건까지 구체화</b></div>
+        </div>
+        <div class="sc-connector"></div>
+        <div class="sc-step accent-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">02</span>
+            <span class="sc-step-title">지점 투어와 맞춤 컨설팅</span>
+          </div>
+          <div class="sc-body">고객 조건에 맞춰 <b>지점과 좌석 구성을 좁혀 제안</b>하고, 투어에서 실제 사용 시나리오까지 설명</div>
+        </div>
+        <div class="sc-connector"></div>
+        <div class="sc-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">03</span>
+            <span class="sc-step-title">제안과 협상</span>
+          </div>
+          <div class="sc-body">견적과 계약 조건을 조율하고, 검토 단계별 <b>의사결정자와 후속 일정을 명확히 관리</b></div>
+        </div>
+        <div class="sc-connector"></div>
+        <div class="sc-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">04</span>
+            <span class="sc-step-title">계약 체결</span>
+          </div>
+          <div class="sc-body">2026년 7월 <b>9건 24석 체결</b> | 평균 계약기간 6.5개월 | 평균 객단가 49.4만원</div>
+        </div>
+      </div>
+
+      <!-- [EDIT P03-3] RIGHT | KPI + OUTCOME -->
+      <div class="ff-right">
+        <div class="ff-kpi-grid">
+          <div class="ff-kpi">
+            <div class="ff-kv accent-t">22.0<span class="ff-ku">%</span></div>
+            <div class="ff-kl">리드에서 계약 전환율<br/>근속 3개월 이하 신입군 12명 중 <b>1위</b>, 평균의 2.2배</div>
+          </div>
+          <div class="ff-kpi">
+            <div class="ff-kv accent-t">11<span class="ff-ku">위</span></div>
+            <div class="ff-kl">전체 32명 기준 전환율 순위<br/>조직 평균의 1.21배, 상위 약 1/3</div>
+          </div>
+          <div class="ff-kpi">
+            <div class="ff-kv accent-t">49.4<span class="ff-ku">만원</span></div>
+            <div class="ff-kl">평균 객단가, 전사 <b>8위</b><br/>실적자 평균 42.5만원 대비 <b>+16.2%</b></div>
+          </div>
+          <div class="ff-kpi">
+            <div class="ff-kv accent-t">48<span class="ff-ku">%</span></div>
+            <div class="ff-kl">월 목표 달성률<br/>신입군 <b>2위</b>, 평균 21.7%의 2.2배</div>
+          </div>
+        </div>
+        <div class="ff-snap">
+          <div class="ff-snap-node">
+            <div class="ff-snap-v">41<span>건</span></div>
+            <div class="ff-snap-k">2026년 7월<br/>배분 리드</div>
+          </div>
+          <div class="ff-snap-arrow">→</div>
+          <div class="ff-snap-node accent">
+            <div class="ff-snap-v">9<span>건 / 24석</span></div>
+            <div class="ff-snap-k">계약서 작성과 회원비 납부 완료<br/>취소 제외</div>
+          </div>
+        </div>
+        <div class="card accent" style="margin-top:12px;">
+          <div class="card-title">직접 영업하며 발견한 문제를 도구로</div>
+          <div class="card-body">고객을 응대하며 반복되는 견적 작성과 팔로업 관리의 비효율을 발견했습니다. 정규 과업 외에 개선 도구를 자발적으로 기획하고 개발했으며, 사내 사용과 팀 전체 발표로 이어졌습니다.<br/><span style="font-size: 10.5px;color:var(--ink-4)">* 22.0%는 2026년 7월 배분 리드 41건 대비 계약서 작성과 회원비 납부를 완료한 계약 9건 기준이며 취소 건은 제외.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-chrome-bot">
+    <span>패스트파이브 | 오피스세일즈그룹 | B2B 멤버십 | 2026.06 – 2026.09</span>
+    <span class="ch-tag">P. 03 / 07</span>
+  </footer>
+</section>
+
+<!-- ========================== [HTML P04] PAGE 04 | SALES OPS ========================== -->
+<section class="page" id="page-04-sales-ops" data-screen-label="04 Sales Ops">
+  <header class="page-chrome-top">
+    <div class="ch-left"><span class="ch-num">04</span><span class="ch-dot"></span><span class="ch-tag">SALES OPS | INTERNAL TOOLS | SALESFORCE</span></div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+  <div class="ff-body">
+    <div class="eyebrow">Case 02 | 현업 문제 발견, 직접 구현과 사내 도입</div>
+    <h1 class="page-title">반복되는 영업 업무를 직접 도구화. 견적은 10분에서 30초로, 팔로업은 정식 기능 반영까지.</h1>
+    <p class="page-sub">인턴 업무 중 발견한 비효율을 바탕으로 <b>도구 2종을 자발적으로 제안, 기획하고 Claude 보조로 개발</b>. 업무 규칙을 구현하고 사내 사용과 피드백으로 개선.</p>
+
+    <div class="ops-grid">
+      <!-- [EDIT P04-QUOTE] 왼쪽 | 견적 문제 → 규칙 구조화 → 구현 → 실측 / 사용 -->
+      <article class="ops-panel ops-quote">
+        <div class="ops-heading"><span class="ops-label">01 | 직접 개발, 사내 배포</span><h2>공실 견적 자동화</h2></div>
+        <div class="ops-metrics">
+          <div><strong>10분 → 30초</strong><span>견적 1건, 직접 측정</span></div>
+          <div><strong>약 12명</strong><span>소속팀 8명 전원 포함</span></div>
+        </div>
+        <div class="ops-steps">
+          <div><b>문제</b><p>공실과 가격 시트를 확인하며 할인, 보증금과 계약 조건을 계산하고 견적 문서를 반복 작성.</p></div>
+          <div><b>판단</b><p>가격, 할인, 미팅룸 크레딧 규칙을 구조화. <strong>항목 이름과 할인 열을 탐색</strong>해 시트 변경에 대응하도록 설계.</p></div>
+          <div><b>구현</b><p>공실 시트를 연동해 견적 메일과 지점별 PPT/PDF 자동 생성. 기본형과 컨설팅형 서식 지원.</p></div>
+        </div>
+        <div class="ops-proof"><strong>시트 개편 2회 무수정 통과</strong><span>회귀 테스트 13종 | 서식 2종</span></div>
+        <!-- [EDIT P04-QUOTE-IMG] 견적 결과. 가로폭 맞춤, y값으로 표시 구간 이동 -->
+        <!-- [PHOTO P04-QUOTE] P04 | 견적 자동화 결과 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<figure class="ops-evidence photo-frame" id="photo-p04-quote"><div class="photo-window"><img class="photo-adjust" src="uploads/패스트파이브_견적서.png" alt="공실 견적 자동화 생성 결과" onerror="imgFail(this)"></div><figcaption>견적서 생성 결과</figcaption></figure>
+        <div class="ops-stack">Google Apps Script | Gmail / Slides API</div>
+      </article>
+
+      <!-- [EDIT P04-FOLLOWUP] 오른쪽 | 본인 개발 / 사내팀 구현 경계 명시 -->
+      <article class="ops-panel">
+        <div class="ops-heading"><span class="ops-label">02 | 직접 제작과 테스트, 파일 전달</span><h2>고객 팔로업 대시보드</h2></div>
+        <div class="ops-steps">
+          <div><b>문제</b><p>담당자가 <strong>5개 회수 규칙</strong>을 직접 계산. 오늘 처리할 리드와 회수 위험을 한눈에 파악하기 어려움.</p></div>
+          <!-- 2026.09.09 사용자 직접 확인: Salesforce 개발 권한 없음 -->
+          <div><b>제약</b><p><strong>Salesforce 개발 권한이 없어</strong> 기존 데이터를 읽기 전용으로 수집하는 Chrome 확장으로 구현.</p></div>
+          <div><b>개선</b><p>단일 HTML, 자동 저장 노트, 대시보드, Chrome 확장으로 4차 재설계. 오늘 할 일과 회수 위험을 우선순위로 표시.</p></div>
+        </div>
+        <!-- [EDIT P04-HANDOVER] 아래부터 구현 주체는 사내팀 -->
+        <div class="ops-handover">
+          <span class="ops-label">파일 전달 후 | 사내팀의 정식 구현</span>
+          <p>법무와 개인정보 검토로 확장 전사 배포 중단. <strong>관련 파일 전체를 전달</strong>했고, 사내팀이 UI와 핵심 기능을 참고해 Salesforce 정식 기능 구현.</p>
+          <div class="ops-adoption"><strong>영업 4팀 29명 사용</strong><span>사내팀 정식 구현본 | 2026.08.27 기준</span></div>
+        </div>
+        <!-- [EDIT P04-FOLLOWUP-IMG] 팔로업 화면. 조정값: #photo-p04-followup -->
+        <!-- [PHOTO P04-FOLLOWUP] P04 | 리드 팔로업 대시보드 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<figure class="ops-evidence photo-frame" id="photo-p04-followup"><div class="photo-window"><img class="photo-adjust" src="uploads/고객 대시보드.png" alt="직접 제작한 Chrome 확장 고객 팔로업 대시보드" onerror="imgFail(this)"></div><figcaption>본인 제작 Chrome 확장 화면</figcaption></figure>
+        <div class="ops-stack">Chrome MV3 | JavaScript | SOQL | 읽기 전용</div>
+      </article>
+    </div>
+    <!-- [EDIT P04-ADOPTION] 도입 공유 / 별도 기획 기여 -->
+    <div class="ops-bottom">
+      <div><strong>팀 전체 발표</strong><span>자발적으로 만든 업무 개선 도구와 도입 성과 공유</span></div>
+      <div><strong>부동산 관리 플랫폼 기획</strong><span>기획 회의 참여, 요구사항 정의와 화면 목업 제작</span></div>
+    </div>
+  </div>
+  <footer class="page-chrome-bot"><span>패스트파이브 | 오피스세일즈그룹 | 2026.06.08 ~ 2026.09.07</span><span class="ch-tag">P. 04 / 07</span></footer>
+</section>
+
+<!-- ========================== [HTML P05] PAGE 05 | E-COMMERCE / BRAND ========================== -->
+<section class="page" id="page-05-ecommerce" data-screen-label="05 E-commerce">
+  <header class="page-chrome-top">
+    <div class="ch-left">
+      <span class="ch-num">05</span>
+      <span class="ch-dot"></span>
+      <span class="ch-tag">BRAND BUILDING | SUPPLY CHAIN | SALES</span>
+    </div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+
+  <div class="p3-body">
+    <div class="eyebrow">Case 03 | 1인 브랜드 구축과 풀사이클 운영</div>
+    <h1 class="page-title">시장 분석부터 공급사 협상, 판매 최적화까지.<br/>1인 브랜드를 직접 운영.</h1>
+    <p class="page-sub">게이밍 주변기기 니치를 발굴해 수입 제품을 리브랜딩하고, <b>판매 실적을 근거로 해외 공급사 MOQ를 2,000개에서 1,000개로 조정</b>. 3주 소싱 리드타임을 역산해 재고를 운영했고 <b>2024.10 최대 월매출 10,268,140원</b>을 달성. 선행상표 조사부터 출원과 최종 등록까지 직접 진행. <span class="muted">광고와 상세페이지 최적화 성과는 Case 04에서 상술.</span></p>
+
+    <div class="p3-main">
+      <!-- [PHOTO P05-PACKAGE] P05 | 브랜드 패키지 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="p3-brand-img photo-frame" id="photo-p05-package">
+        <img class="photo-adjust" src="uploads/box-design.png" alt="자체 브랜드 패키지 디자인" onerror="imgFail(this)">
+        <div class="p3-img-caption">PRIVATE BRAND | 패키지 디자인 직접 제작, 로고, 캐릭터, 박스</div>
+      </div>
+
+      <div class="p3-cycle">
+        <div class="sc-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">01</span>
+            <span class="sc-step-title">시장 분석과 포지셔닝</span>
+          </div>
+          <div class="sc-body">범용 쿨러 시장에서 <b>게이밍과 RGB</b> 니치 발굴, 타깃 고객 명확화 및 경쟁 구도 분석</div>
+        </div>
+        <div class="sc-connector"></div>
+        <div class="sc-step accent-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">02</span>
+            <span class="sc-step-title">브랜드와 패키지 직접 설계</span>
+          </div>
+          <div class="sc-body">수입 제품을 <b>리브랜딩하고 리패키징</b> | 로고, 캐릭터, 박스 이미지를 직접 제작해 범용 제품을 브랜드 상품으로 전환</div>
+        </div>
+        <div class="sc-connector"></div>
+        <div class="sc-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">03</span>
+            <span class="sc-step-title">공급사 조건 협상</span>
+          </div>
+          <div class="sc-body">해외 공급업체와 OEM 진행 | 판매 실적을 근거로 <b>MOQ 2,000개에서 1,000개로 조정</b> | 3주 리드타임 역산 재고 관리</div>
+        </div>
+        <div class="sc-connector"></div>
+        <div class="sc-step">
+          <div class="sc-head">
+            <span class="sc-num-badge">04</span>
+            <span class="sc-step-title">권리 확보와 판매 최적화</span>
+          </div>
+          <div class="sc-body">KIPRIS 선행상표 조사 후 <b>출원과 최종 등록 절차를 직접 진행</b> | 광고와 상세페이지 데이터 최적화는 Case 04 참조</div>
+        </div>
+
+        <div class="p3-kpi-strip">
+          <div class="p3-kpi-item">
+            <span class="p3-kv accent-t">1,026<span class="p3-ku">만원</span></span>
+            <span class="p3-kl">2024.10 최대 월매출<br>취소와 반품 반영</span>
+          </div>
+          <div class="p3-kpi-item">
+            <span class="p3-kv accent-t">2,000<span class="p3-ku">→1,000개</span></span>
+            <span class="p3-kl">해외 공급사 OEM<br>MOQ 조정</span>
+          </div>
+          <div class="p3-kpi-item">
+            <span class="p3-kv accent-t">3<span class="p3-ku">주</span></span>
+            <span class="p3-kl">소싱 리드타임<br>역산 재고 운영</span>
+          </div>
+          <div class="p3-kpi-item">
+            <span class="p3-kv accent-t">등록<span class="p3-ku">완료</span></span>
+            <span class="p3-kl">KIPRIS 선행조사<br>출원과 최종 등록</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="evidence-row">
+      <div class="ev">
+        <!-- [PHOTO P05-SALES] P05 | 매출 그래프 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="ph photo-frame" style="height:100%; padding:0; background:none; border:1px solid var(--line); overflow:hidden;" id="photo-p05-sales"><img class="photo-adjust" src="uploads/pasted-1776860396496-0.png" alt="스마트스토어 최대 월매출 그래프" onerror="imgFail(this)"></div>
+      </div>
+      <div class="ev">
+        <!-- [PHOTO P05-ADS] P05 | 광고 성과 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="ph photo-frame" style="height:100%; padding:0; background:none; border:1px solid var(--line); overflow:hidden;" id="photo-p05-ads"><img class="photo-adjust" src="uploads/pasted-1776860494933-0.png" alt="광고 성과 지표, CTR, ROAS 데이터" onerror="imgFail(this)"></div>
+      </div>
+      <div class="ev">
+        <!-- [PHOTO P05-PATENT] P05 | 출원사실증명원 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="ph photo-frame" style="height:100%; padding:0; background:none; border:1px solid var(--line); overflow:hidden;" id="photo-p05-patent"><img class="photo-adjust" src="uploads/pasted-1776860363720-0.png" alt="특허청 출원사실증명원" onerror="imgFail(this)"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-chrome-bot">
+    <span>자체 브랜드 구축 | 공급사 협상 | 쿠팡, 스마트스토어 | 2024.07 – 2026.01</span>
+    <span class="ch-tag">P. 05 / 07</span>
+  </footer>
+</section>
+
+<!-- ========================== [HTML P06] PAGE 06 | DATA OPTIMIZATION ========================== -->
+<section class="page" id="page-06-data-optimization" data-screen-label="06 Data Optimization">
+  <header class="page-chrome-top">
+    <div class="ch-left">
+      <span class="ch-num">06</span>
+      <span class="ch-dot"></span>
+      <span class="ch-tag">BUYER PSYCHOLOGY | PERSUASION DESIGN</span>
+    </div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+
+  <div class="dp-body">
+    <div>
+      <div class="eyebrow">Case 04 | 이커머스 운영과 고객 설득 자료 제작</div>
+      <h1 class="page-title">이커머스 광고 운영과 상세페이지 개선</h1>
+      <p class="page-sub">쿠팡 운영에서 <b>구매객 검색어와 CPC, ROAS</b>를 바탕으로 광고와 구매 판단 정보를 점검했습니다. 오른쪽에는 별도 상품인 <b>쿨매트 상세페이지 제작 사례</b>를 제시합니다.</p>
+    </div>
+
+    <div class="dp-grid" style="grid-row: span 2;">
+      <!-- [EDIT P06-2] LEFT | DIAGNOSIS + ACTIONS -->
+      <div class="dp-action">
+        <div class="par-label"><span class="par-num">01</span> DIAGNOSIS | 고객 이탈 구조 분해</div>
+
+        <div class="journey-flow">
+          <div class="journey-step">
+            <div class="journey-label">노출</div>
+            <div class="journey-icon neutral">👁</div>
+            <div class="journey-issue muted small">검색 키워드와<br/>타깃 적합성 점검</div>
+          </div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step problem-step">
+            <div class="journey-label accent-t">클릭</div>
+            <div class="journey-icon bad">?</div>
+            <div class="journey-issue small"><b>검색어, 썸네일과 카피</b><br/>클릭을 유도하는 정보 점검</div>
+          </div>
+          <div class="journey-arrow">→</div>
+          <div class="journey-step problem-step">
+            <div class="journey-label accent-t">구매</div>
+            <div class="journey-icon bad">?</div>
+            <div class="journey-issue small"><b>비교표, 후기와 소구점</b><br/>구매 판단 근거 점검</div>
+          </div>
+        </div>
+
+        <div class="par-label" style="margin-top:6px"><span class="par-num">02</span> ACTION | 가설과 검증 루프</div>
+        <div class="act-grid">
+          <div class="act">
+            <div class="act-k">구매객 키워드 역추적</div>
+            <div class="act-v">쿠팡 윙 데이터센터로 실 구매객 검색어를 분석해 <b>고효율 키워드를 헤더에 반영</b>하고 클릭 타깃을 정밀화</div>
+          </div>
+          <div class="act">
+            <div class="act-k">저효율 광고 차단</div>
+            <div class="act-v">CPC가 높고 ROAS가 낮은 소재를 중단하고 예산을 <b>고효율 구간으로 재배분</b></div>
+          </div>
+          <div class="act">
+            <div class="act-k">설득 자료 재설계</div>
+            <div class="act-v">Canva와 Figma로 비교표를 제작해 <b>구매 판단 근거</b>를 한눈에 제시</div>
+          </div>
+        </div>
+
+        <div class="dp-result-strip">
+          <div class="dp-rs-head">쿠팡 운영 성과</div>
+          <div class="dp-rs-grid">
+            <div class="dp-rs-item"><span class="dp-rs-v accent-t">1110<span class="dp-rs-u">%</span></span><span class="dp-rs-k">ROAS<br/>2024.07~09 평균</span></div>
+            <div class="dp-rs-item"><span class="dp-rs-v accent-t">15<span class="dp-rs-u">%</span></span><span class="dp-rs-k">구매 전환율<br/>2024.07~09 평균</span></div>
+            <div class="dp-rs-item"><span class="dp-rs-v accent-t">300<span class="dp-rs-u">개 이상</span></span><span class="dp-rs-k">2024.07 노트북 쿨러 판매</span></div>
+          </div>
+          <div class="dp-note">* 운영 기간의 관측값으로, 개별 변경의 효과를 분리 측정한 수치는 아닙니다. 노트북 쿨러 판매량은 취소와 반품 제외 기준입니다.</div>
+        </div>
+      </div>
+
+      <!-- [EDIT P06-3] RIGHT | COOL MAT DETAIL PAGE EXAMPLES | 전후 비교 아님 -->
+      <div class="dp-ba">
+        <div class="par-label"><span class="par-num">03</span> 상세페이지 제작 사례 | 쿨매트</div>
+        <div class="dp-note coolmat-scope">왼쪽 운영 성과와 별도 상품의 제작 사례</div>
+        <div class="ba-cards">
+          <div class="ba-card product-scene">
+            <div class="ba-card-h">사용 장면과 핵심 문구</div>
+            <!-- [PHOTO P06-COOLMAT-SCENE] P06 | 쿨매트 사용 장면과 핵심 문구 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="ba-shot ba-shot-single photo-frame" id="photo-p06-coolmat-scene">
+              <img class="photo-adjust" src="uploads/쿠팡2.png" alt="쿨매트 사용 장면과 핵심 문구" onerror="imgFail(this)">
+            </div>
+            <ul class="mini-list">
+              <li>반려견의 제품 사용 장면 제시</li>
+              <li>이미지와 핵심 문구를 함께 배치</li>
+              <li>첫 화면에서 제품 용도 전달</li>
+            </ul>
+          </div>
+
+
+          <div class="ba-card product-detail">
+            <div class="ba-card-h accent-t">비교표와 제품 정보</div>
+            <!-- [EDIT P06-COOLMAT-IMG] 쿨매트 제작 사례 이미지 2장. 기본 위아래 배치, [PHOTO FRAME SIZE]에서 변경 -->
+            <div class="ba-shots">
+              <!-- [PHOTO P06-COOLMAT-INFO-1] P06 | 쿨매트 비교표 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="ba-shot photo-frame" id="photo-p06-coolmat-info-1">
+                <img class="photo-adjust" src="uploads/쿠팡1.png" alt="쿨매트 비교표" onerror="imgFail(this)">
+              </div>
+              <!-- [PHOTO P06-COOLMAT-INFO-2] P06 | 쿨매트 제품 정보 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="ba-shot photo-frame" id="photo-p06-coolmat-info-2">
+                <img class="photo-adjust" src="uploads/쿠팡3.png" alt="쿨매트 제품 정보" onerror="imgFail(this)">
+              </div>
+            </div>
+            <ul class="mini-list">
+              <li>비교 항목을 표로 구성</li>
+              <li>제품 정보와 이미지를 함께 배치</li>
+              <li>구매 판단에 필요한 정보 정리</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-chrome-bot">
+    <span>쿠팡 윈 데이터센터 | 광고 관리자 | Canva, Figma | 운영 지표: 2024.07~09</span>
+    <span class="ch-tag">P. 06 / 07</span>
+  </footer>
+</section>
+
+<!-- ========================== [HTML P07] PAGE 07 | SENTIQUANT ========================== -->
+<section class="page" id="page-07-sentiquant" data-screen-label="07 SentiQuant">
+  <header class="page-chrome-top">
+    <div class="ch-left">
+      <span class="ch-num">07</span>
+      <span class="ch-dot"></span>
+      <span class="ch-tag">AI SYSTEM | VALIDATION | RISK CONTROL</span>
+    </div>
+    <div class="ch-tag">PORTFOLIO / 2026</div>
+  </header>
+
+  <div class="sq-body">
+    <div class="eyebrow">Case 05 | AI 기반 투자 의사결정 시스템</div>
+    <h1 class="page-title">AI가 낸 답을 그대로 믿지 않고,<br/>실제 운영 데이터로 가설과 통제 장치를 검증.</h1>
+    <p class="page-sub">4인 팀의 팀장이자 프로젝트 총괄로 기획, 핵심 개발과 시스템 통합을 주도. 2026.06.14 제출 이후 후속 모의운영에서 <b>모델의 판단, 체결 정합성, 운영 실패</b>를 다시 검증하고 성능이 뒤집힌 가설을 폐기하며 안전장치를 강화.</p>
+
+    <div class="sq-kpi-hero">
+      <div class="kpi">
+        <div class="kpi-value"><span class="accent">47</span><span class="unit">거래일</span></div>
+        <div class="kpi-label">제출 후 실제 모의체결 기반 운영 검증</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value"><span class="accent">72/72</span></div>
+        <div class="kpi-label">KIS 체결 내역과 내부 원장 대조 일치</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value"><span class="accent">304</span><span class="unit">개</span></div>
+        <div class="kpi-label">후속 개선 회귀 테스트 통과</div>
+      </div>
+    </div>
+
+    <div class="sq-grid">
+      <!-- [EDIT P07-3] LEFT | 시스템 구조 + 대시보드 이미지 -->
+      <div class="sq-col">
+        <div class="par-label"><span class="par-num">01</span> SYSTEM | 판단 흐름 통합</div>
+        <div class="sq-flow">
+          <div class="sq-node"><strong>INPUT</strong>뉴스와 Reddit 비정형 데이터</div>
+          <div class="sq-node"><strong>NLP</strong>TextBlob 기준선에서 FinBERT로 전환</div>
+          <div class="sq-node"><strong>SIGNAL</strong>RSI, 이동평균, ATR, 시장 필터</div>
+          <div class="sq-node"><strong>DECISION</strong>규칙을 우회하지 못하는 LLM Router</div>
+          <div class="sq-node"><strong>EXECUTION</strong>KIS 모의주문과 Streamlit 대시보드</div>
+        </div>
+        <div class="sq-note">유사한 과거 사례를 참고하는 <b>Community Memory와 Reflection</b>을 더하되, LLM이 매매 규칙을 임의로 건너뛰지 못하도록 판단 권한을 제한.</div>
+
+        <!-- [EDIT P07-4] IMAGE | uploads/투자.png 한 장만 교체 -->
+        <div class="par-label"><span class="par-num">02</span> SCREENSHOT | 통합 대시보드</div>
+        <!-- [PHOTO P07-DASHBOARD] P07 | SentiQuant 대시보드 | 조정값은 [PHOTO SETTINGS]에서 수정 -->
+<div class="sq-shot photo-frame" id="photo-p07-dashboard">
+          <img class="photo-adjust" src="uploads/투자.png" alt="SentiQuant Streamlit 통합 대시보드" onerror="imgFail(this)">
+          <div class="sq-shot-caption">SENTIQUANT | STREAMLIT DASHBOARD</div>
+        </div>
+      </div>
+
+      <!-- [EDIT P07-5] RIGHT | 검증 + 판단 조정 + 안전장치 -->
+      <div class="sq-col">
+        <div class="par-label"><span class="par-num">03</span> VALIDATION | 제출 후 재검증</div>
+        <div class="sq-reconcile">
+          <div><b>발견</b><span>체결 조회 누락과 시뮬레이션 체결 혼입 확인</span></div>
+          <div><b>보완</b><span>날짜 구간을 나눠 실제 모의체결 조회와 원장 대조</span></div>
+          <div><b>검증</b><span><strong>KIS 72건과 내부 원장 72건 일치 확인</strong></span></div>
+        </div>
+
+        <div class="par-label"><span class="par-num">04</span> JUDGMENT | 결과에 따른 조정</div>
+        <div class="sq-decision">
+          <div class="sq-decision-row"><span class="sq-decision-key">판단</span><span>벤치마크와 기간 분할 비교로 수익성 가설 미충족 확인. 기간과 비용 조건에 따라 성능이 뒤집힌 가설 폐기.</span></div>
+          <div class="sq-decision-row"><span class="sq-decision-key">조정</span><span>감성 점수, 진입 필터와 보유기간을 재검증하고 운영 안전장치 강화.</span></div>
+        </div>
+        <div class="sq-note"><b>운영 안전장치</b> | 주문 전 점검과 영속 경고로 실패를 드러내고, 중단 플래그로 Watchdog 재시작 문제 보완.</div>
+
+        <div class="sq-status">
+          <strong>CURRENT STATUS | 2026.09.03</strong>
+          KIS 모의계좌 권한 오류로 주문 경로는 일시 중단. 신호 생성과 검증은 계속하며 주문 재개보다 원인 확인을 우선.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-chrome-bot">
+    <span>Python | FinBERT | KIS OpenAPI | Streamlit | pytest | 2026.03 – 현재</span>
+    <span class="ch-tag">P. 07 / 07</span>
+  </footer>
+</section>
+
+</div>
+
+</body>
+</html>
